@@ -7,9 +7,10 @@ vim-semicolon
 # Example
 
 ```vim
-nnoremap <silent> ;   :<C-u>call semicolon#semicolon()<CR>
-nnoremap <silent> ,   :<C-u>call semicolon#comma()<CR>
-" 3rd argument = 0: save only if v:count > 1 
+nmap ;   <Plug>(semicolon-forward)
+nmap ,   <Plug>(semicolon-back)
+
+" 3rd argument = 0: save only if v:count > 1
 nnoremap <silent> j   :<C-u>call semicolon#define('j', 'k', 0)<CR>
 nnoremap <silent> k   :<C-u>call semicolon#define('k', 'j', 0)<CR>
 " 3rd argument = 1: save always
